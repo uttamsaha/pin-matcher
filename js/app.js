@@ -34,8 +34,6 @@ document.getElementById('key-pad').addEventListener('click', function(event){
 
 let count = 3;
 function verifyPin(){
-   count = count - 1;
-   console.log(count);
    const pin = document.getElementById('display-pin').value;
    const calcOutput = document.getElementById('output').value;
    const pinSuccess = document.getElementById('pin-success');
@@ -48,16 +46,18 @@ function verifyPin(){
    else{
        pinFail.style.display = 'block';
        pinSuccess.style.display = 'none';
-   }
-   
-   const actionLeft = document.getElementById('action-left');
+       count = count - 1;
+          const actionLeft = document.getElementById('action-left');
+          actionLeft.style.display = 'block';
    if(count >= 0){
      actionLeft.innerText = count + ' try left';
    }
-   if(count == 0){
+
+       if(count == 0){
        const keyPad = document.getElementById('key-pad');
        keyPad.style.pointerEvents = 'none';
    }
- 
-    
+
+   }
+
 }
