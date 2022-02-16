@@ -44,13 +44,13 @@ function verifyPin(){
        pinFail.style.display = 'none';
    }
    else{
-       pinFail.style.display = 'block';
-       pinSuccess.style.display = 'none';
-       count = count - 1;
-          const actionLeft = document.getElementById('action-left');
-          actionLeft.style.display = 'block';
-   if(count >= 0){
-     actionLeft.innerText = count + ' try left';
+        pinFail.style.display = 'block';
+        pinSuccess.style.display = 'none';
+        count = count - 1;
+        const actionLeft = document.getElementById('action-left');
+        actionLeft.style.display = 'block';
+        if(count >= 0){
+        actionLeft.innerText = count + ' try left';
    }
 
        if(count == 0){
